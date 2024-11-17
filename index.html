@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background">
+        <div class="navbar">
+            <div class="logo">PENDAFTARAN SISWA/SISWI BARU</div>
+            <ul>
+                <li><a href="admin-login.html">Login Admin</a></li>
+                <li><a href="siswa-login.html">Login Siswa</a></li>
+            </ul>
+        </div>
+        <div class="form-container">
+            <h2>Daftar</h2>
+            <p>Sudah punya akun? <a href="login_siswa.php">Login</a></p>
+            <form action="submit.php" method="POST" id="form-pendaftaran">
+                <div class="input-group">
+                    <input type="text" name="id_pendaftaran" id="id_pendaftaran"
+                        placeholder="ID Pendaftaran (e.g., 12345PPDB)" required pattern="[0-9]+PPDB"
+                        title="Harus angka diikuti PPDB">
+                </div>
+                <div class="input-group">
+                    <input type="date" name="tgl_daftar" placeholder="Tanggal Daftar (yyyy-mm-dd)" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="th_ajaran" placeholder="Contoh: 2023/2024" required>
+                </div>
+                <div class="input-group">
+                    <select name="jurusan" required>
+                        <option value="" disabled selected>Pilih Jurusan</option>
+                        <option value="RPL">RPL</option>
+                        <option value="ANIMASI">ANIMASI</option>
+                        <option value="TKJ">TKJ</option>
+                        <option value="TJAT">TJAT</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="nm_peserta" placeholder="Nama Peserta" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="tmp_lahir" placeholder="Tempat Lahir" required>
+                </div>
+                <div class="input-group">
+                    <input type="date" name="tgl_lahir" placeholder="Tanggal Lahir" required>
+                </div>
+                <div class="input-group">
+                    <select name="jk" required>
+                        <option value="" disabled selected>Jenis Kelamin</option>
+                        <option value="Laki-Laki">Laki-Laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="agama" placeholder="Agama" required>
+                </div>
+                <div class="input-group">
+                    <textarea name="almt_peserta" placeholder="Alamat Peserta (e.g., Jl. Kemerdekaan No. 123, Jakarta)"
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="btn">Register</button>
+                <div class="terms">
+                    <p>Terima Kasih</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
